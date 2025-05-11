@@ -1,0 +1,119 @@
+/* General Body Styling */
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #FC0; /* Lighter text for better contrast */
+	background-color: #036; /* Fallback color for browsers with no video support */
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Background Video Styling */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures it's behind the container */
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensures video fits the screen without distortion */
+    z-index: -1;
+}
+
+/* Container Styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for depth */
+    position: relative; /* Ensures it's above the video */
+    z-index: 1; /* Places it over the background */
+}
+
+/* Title Styling */
+.title-white {
+    color: #FFFFFF; /* White color */
+    font-size: 2.5rem; /* Larger font size */
+    text-align: center; /* Centered text */
+    margin-bottom: 20px;
+}
+
+/* Subtitle Styling */
+.text-gold-left {
+    color: #FFD700; /* Gold color */
+    font-size: 1.2rem; /* Smaller than the title */
+    text-align: justify; /* Left-justified */
+    margin-bottom: 30px;
+}
+
+/* Text Color for White */
+.text-white {
+    color: #FFFFFF;
+}
+
+/* Text Color for Gold */
+.text-gold {
+    color: #FFD700;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid darkred; /* Dark red border added */
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: darkred;
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cta-button:active {
+    background-color: #E6E6E6; /* Light gray background for active state */
+    color: #000000; /* Keep black text */
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjust width to fit smaller screens */
+        padding: 20px; /* Reduce padding for smaller devices */
+        margin: 20px auto; /* Adjust margins */
+        background-color: rgba(0, 0, 0, 0.6); /* Lighter container for mobile */
+    }
+
+    #background-video {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover; /* Ensure the video still fits */
+    }
+
+    body {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}

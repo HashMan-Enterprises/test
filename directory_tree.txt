@@ -1,0 +1,35 @@
+Folder PATH listing
+Volume serial number is 76B6-3042
+C:.
+|   directory_tree.txt
+|   index.html
+|   
++---admin
+|       admin.php
+|       users.php
+|       
++---config
+|       db_connection.php
+|       
++---images
+|       background.mp4
+|       
++---public
+|       already_subscribed.php
+|       confirm.php
+|       index.html
+|       signup.php
+|       subscribe.html
+|       unsubscribed.php
+|       
++---scripts
+|       db_setup.sql
+|       db_update.sql
+|       email_test.php
+|       reset_tokens.php
+|       sample_data.sql
+|       
+\---style
+        admin-styles.css
+        signup-styles.css
+        
